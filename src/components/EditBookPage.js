@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { graphql, compose } from 'react-apollo';
 import { getBookQuery, editBookMutation } from '../queries/Book'; 
-import EditForm from './EditForm';
+import BookForm from './BookForm';
 
 class EditBookPage extends Component{
   constructor(props){
@@ -23,8 +23,9 @@ class EditBookPage extends Component{
 
     return(
       <div>
+        <h1>Edit Book Page</h1>
         <p>ID: {this.props.match.params.id}</p>
-        <EditForm book={book} history={this.props.history} onSubmit={this.onSubmit} />
+        <BookForm book={book} history={this.props.history} onSubmit={this.onSubmit} />
       </div>
     )
   }

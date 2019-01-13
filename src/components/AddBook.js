@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import {graphql, compose} from 'react-apollo';
-import {getAuthorsQuery, addBookMutation} from '../queries/Book';
+import React, { Component } from 'react';
+import { graphql, compose } from 'react-apollo';
+import { addBookMutation } from '../queries/Book';
+import { getAuthorsQuery } from '../queries/Author';
 
 class AddBook extends Component {
   constructor(props) {
@@ -38,6 +39,8 @@ class AddBook extends Component {
   }
 
   render() {
+    console.log(this.props);
+    
     return (
       <form id="add-book" onSubmit={this.submitForm.bind(this)}>
         <div className="field">

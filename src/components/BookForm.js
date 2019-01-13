@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-// import { graphql } from 'react-apollo';
-// import{ editBookMutation, getBooksQuery } from '../queries/Book';
 
-class EditForm extends Component{
+class BookForm extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -21,13 +19,9 @@ class EditForm extends Component{
     e.preventDefault();
     const {id, name} = this.state;
 
-    // this.props.mutate({
-    //   variables: {id: this.state.bookId, name: this.state.name},
-    //   refetchQueries: [ {query: getBooksQuery} ]
-    // }).then(()=>{this.props.history.push('/')});  
     const formData = {
-      name: name,
-      id: id
+      id,
+      name
     }
     this.props.onSubmit(formData);
   }
@@ -35,7 +29,6 @@ class EditForm extends Component{
   render(){
     return(
       <div>
-        <h1>Edit Form</h1>
         <form onSubmit={this.onSubmit}>
           <input type="text" name="name" value={this.state.name} onChange={this.onChange} />
           <br />
@@ -46,4 +39,4 @@ class EditForm extends Component{
   }
 }
 
-export default EditForm;
+export default BookForm;
