@@ -4,9 +4,9 @@ import { getBookQuery, editBookMutation } from '../queries/Book';
 import BookForm from './BookForm';
 
 class EditBookPage extends Component{
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
 
   onSubmit = (formData) =>{
     const {id, name} = formData;

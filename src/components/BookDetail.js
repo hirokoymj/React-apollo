@@ -3,9 +3,9 @@ import { graphql } from 'react-apollo';
 import { getBookQuery } from '../queries/Book'; 
 
 class BookDetail extends Component{
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
 
   render(){
     console.log(this.props);
